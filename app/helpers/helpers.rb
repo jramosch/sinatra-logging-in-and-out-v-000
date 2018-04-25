@@ -6,6 +6,5 @@ class Helpers
 
   def self.is_logged_in?(session)
     !!User.find(session[:user_id])
-    binding.pry
   end
 end
