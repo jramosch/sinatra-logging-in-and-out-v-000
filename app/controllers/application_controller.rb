@@ -1,4 +1,5 @@
 require_relative '../../config/environment'
+require 
 
 class ApplicationController < Sinatra::Base
   include Helpers
@@ -25,7 +26,7 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     puts "#{Helpers.logged_in?(session)}"
-    if Helpers.logged_in?
+    if Helpers.logged_in?(session)
       @user = Helpers.current_user(session)
       erb :account
     else
