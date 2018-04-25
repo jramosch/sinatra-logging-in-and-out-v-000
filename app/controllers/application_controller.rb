@@ -1,5 +1,4 @@
 require_relative '../../config/environment'
-require 
 
 class ApplicationController < Sinatra::Base
   include Helpers
